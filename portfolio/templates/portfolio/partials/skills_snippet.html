@@ -2,19 +2,19 @@
     <div class="row align-items-center">
         <div class="col-5 col-sm-4 col-md-5 col-lg-4 col-xl-3">
             <div class="d-flex align-items-center">
-                <i class="fa-brands fa-html5 fa-2x me-3 htmlColor"></i>
-                <p class="fw-bold m-0">HTML5</p>
+                <i class="fa-brands fa-{{ skill.name | lower }} fa-2x me-3 {{ skill.name | lower }}Color"></i>
+                <p class="fw-bold m-0">{{ skill.name }}</p>
             </div>
         </div>
         <div class="col">
             <div class="progress">
                 <div
-                    class="progress-bar progress-bar-striped progress-bar-animated htmlColor-Bg"
+                    class="progress-bar progress-bar-striped progress-bar-animated {{ skill.name | lower }}Color-Bg"
                     role="progressbar"
-                    aria-valuenow="75"
+                    aria-valuenow="{{ skill.percent }}"
                     aria-valuemin="0"
                     aria-valuemax="100"
-                    style="width: 75%"
+                    style="width: {{ skill.percent }}%"
                 ></div>
             </div>
         </div>

@@ -308,11 +308,11 @@ img {
 	transform: scale(0.92);
 }
 
-.htmlColor {
+.html5Color {
 	color: #ec6231;
 }
 
-.htmlColor-Bg {
+.html5Color-Bg {
 	background-color: #ec6231;
 }
 
@@ -324,11 +324,11 @@ img {
 	background-color: #cc6699;
 }
 
-.bsColor {
+.bootstrapColor {
 	color: #563d7c;
 }
 
-.bsColor-Bg {
+.bootstrapColor-Bg {
 	background-color: #563d7c;
 }
 
