@@ -1,0 +1,56 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="msapplication-TileColor" content="#da532c" />
+		<meta name="theme-color" content="#ffffff" />
+		<!--=============== BOXICONS ===============-->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
+		<!-- BOOTSTRAP -->
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+			crossorigin="anonymous"
+		/>
+		<!-- CSS -->
+		<link rel="stylesheet" href="{% static 'css/style.css' %}" />
+		<!-- FAVICON -->
+		<link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicon/apple-touch-icon.png' %}" />
+		<link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon/favicon-32x32.png' %}" />
+		<link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicon/favicon-16x16.png' %}" />
+		<link rel="manifest" href="{% static 'favicon/site.webmanifest' %}" />
+		<title>monPortfolio</title>
+	</head>
+	<body>
+        <!-- CONTENTS -->
+		{% include "portfolio/partials/header.html" %}
+		<main>{% block content %}{% endblock content %}</main>
+        {% include "portfolio/partials/footer.html" %}
+
+        <!-- COMPONENTS -->
+        <modal-component></modal-component>
+        <btn-top-component></btn-top-component>
+
+        <!--=============== JAVASCRIPT ===============-->
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://code.jquery.com/jquery-3.6.0.min.js"
+			integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+			crossorigin="anonymous"
+		></script>
+		<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+		<script src="https://kit.fontawesome.com/9414e04596.js" crossorigin="anonymous"></script>
+		<script src="{% static 'js/index.js' %}"></script>
+		<script src="{% static 'js/backTopBtn.js' %}"></script>
+		<script src="{% static 'js/modal.js' %}"></script>
+	</body>
+</html>

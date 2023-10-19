@@ -1,0 +1,52 @@
+class Modal extends HTMLElement {
+	constructor() {
+		super();
+	}
+
+	connectedCallback() {
+		this.innerHTML = `
+            <!-- Modal -->
+            <div class="modal fade" id="mentionsLegales" tabindex="-1" aria-labelledby="mentionsLegales" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="mentionsLegales">Mentions légales</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div>
+                                <h4>Webmaster</h4>
+                                <p>Jean Marie Geronimi</p>
+                            </div>
+                            <div>
+                                <h4>Hébergement</h4>
+                                <p>
+                                    Hébergeur : OVH<br />
+                                    Siège social : 2 rue Kellermann - 59100 Roubaix - France<br />
+                                    RCS Lille Métropole 424 761 419 00045<br />
+                                    Code APE 2620Z<br />
+                                    SAS au capital de 10 174 560 €<br />
+                                    RCS : Lille Métropole – SIRET : 424 761 419 00045<br />
+                                    TVA : FR 22 424 761 419
+                                </p>
+                            </div>
+                            <div>
+                                <h4>Données personnelles</h4>
+                                <p>
+                                    Les seules informations recueillies sur ce site sont celles données par le formulaire de contact. Elles ne sont utilisées que pour vous
+                                    répondre et ne sont pas stockées dans des fichiers numériques et ne sont ni revendues ni communiqées à des tiers à des fins commerciales
+                                    et/ou publicitaires.
+                                    <br />
+                                    Conformément aux lois « Informatique & Liberté » et « RGPD », vous pouvez nous contacter pour vous assurer de la bonne conformité à ces
+                                    déclarations.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>        
+        `;
+	}
+}
+
+customElements.define("modal-component", Modal);
