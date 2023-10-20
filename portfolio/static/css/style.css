@@ -332,12 +332,20 @@ img {
 	background-color: #563d7c;
 }
 
-.pyColor {
+.pythonColor {
 	color: #306998;
 }
 
-.pyColor-Bg {
+.pythonColor-Bg {
 	background-color: #306998;
+}
+
+.angularColor {
+	color:red;
+}
+
+.angularColor-Bg {
+	background-color: red;
 }
 
 .javaColor {
@@ -346,6 +354,14 @@ img {
 
 .javaColor-Bg {
 	background-color: #f89820;
+}
+
+.javascriptColor-Bg {
+	background-color: #ffbe3c;
+}
+
+.javascriptColor {
+	color: #ffbe3c;
 }
 
 .phpColor {
@@ -364,11 +380,11 @@ img {
 	background-color: #00758f;
 }
 
-.tailColor {
+.tailwindColor {
 	color: #38bdf8;
 }
 
-.tailColor-Bg {
+.tailwindColor-Bg {
 	background-color: #38bdf8;
 }
 
@@ -384,11 +400,11 @@ img {
 	background-color: #016ec9;
 }
 
-.SymColor-Bg {
+.symfonyColor-Bg {
 	background-color: black;
 }
 
-.dockColor {
+.dockerColor {
 	color: #00758f;
 }
 
@@ -419,9 +435,6 @@ img {
 	border-radius: 0px 0px 70px 70px;
 	box-shadow: 0px 0px 0px 6px black;
 	animation: fill 5s infinite;
-	background: url(../img/coffee.png);
-	background-repeat: repeat-x;
-	background-position: 0px 140px;
 }
 
 @keyframes fill {
@@ -455,36 +468,6 @@ img {
 	left: 175px;
 	top: 1px;
 	border-radius: 0px 25px 80px 0px;
-}
-
-.bg-icescream {
-	background-image: url(../img/icescream.PNG);
-	background-size: cover;
-}
-
-.bg-webdesigner {
-	background-image: url(../img/webd.PNG);
-	background-size: cover;
-}
-
-.bg-instantcafe {
-	background-image: url(../img/instantkf.PNG);
-	background-size: cover;
-}
-
-.bg-mynote {
-	background-image: url(../img/flask.PNG);
-	background-size: cover;
-}
-
-.bg-morpioncanvas {
-	background-image: url(../img/morp.PNG);
-	background-size: cover;
-}
-
-.bg-hamsterauto {
-	background-image: url(../img/hauto.PNG);
-	background-size: cover;
 }
 
 .flip-card-front h5 {

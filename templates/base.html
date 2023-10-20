@@ -24,9 +24,10 @@
 		<link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon/favicon-32x32.png' %}" />
 		<link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicon/favicon-16x16.png' %}" />
 		<link rel="manifest" href="{% static 'favicon/site.webmanifest' %}" />
+		<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 		<title>monPortfolio</title>
 	</head>
-	<body>
+	<body hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}'>
         <!-- CONTENTS -->
 		{% include "portfolio/components/header.html" %}
 		<main>{% block content %}{% endblock content %}</main>
@@ -47,6 +48,7 @@
 			integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
 			crossorigin="anonymous"
 		></script>
+		<script src="https://unpkg.com/htmx.org@1.9.6"></script>
 		<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 		<script src="https://kit.fontawesome.com/9414e04596.js" crossorigin="anonymous"></script>
 		<script src="{% static 'js/index.js' %}"></script>

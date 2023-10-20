@@ -1,22 +1,48 @@
+{% load static %}
+
 <div class="mb-3 p-3 bg-white shadow rounded-3">
-    <div class="row align-items-center">
-        <div class="col-5 col-sm-4 col-md-5 col-lg-4 col-xl-3">
-            <div class="d-flex align-items-center">
-                <i class="fa-brands fa-{{ skill.name | lower }} fa-2x me-3 {{ skill.name | lower }}Color"></i>
-                <p class="fw-bold m-0">{{ skill.name }}</p>
-            </div>
-        </div>
-        <div class="col">
-            <div class="progress">
-                <div
-                    class="progress-bar progress-bar-striped progress-bar-animated {{ skill.name | lower }}Color-Bg"
-                    role="progressbar"
-                    aria-valuenow="{{ skill.percent }}"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                    style="width: {{ skill.percent }}%"
-                ></div>
-            </div>
-        </div>
-    </div>
+	<div class="row align-items-center">
+		<div class="col-5 col-sm-4 col-md-5 col-lg-4 col-xl-3">
+			<div class="d-flex align-items-center">
+				{% if skill.name|lower == "django" %}
+				<img class="djangoColor me-3" width="18%" src="{% static '/img/logos/django.png' %}" alt="django-logo" />
+				{% elif skill.name|lower == "ccs3" %}
+				<i class="fa-brands fa-css3-alt fa-2x me-3 text-primary"></i>
+				{% elif skill.name|lower == "jquery" %}
+				<img class="jqueryColor me-3" width="15%" src="{% static '/img/logos/jquery.png' %}" alt="jquery-logo" />
+				{% elif skill.name|lower == "javascript" %}
+				<i class="fa-brands fa-js-square fa-2x me-3 text-warning"></i>
+				{% elif skill.name|lower == "ajax" %}
+				<img class="me-2" src="{% static '/img/logos/ajax.png' %}" width="20%" alt="ajax_logo" />
+				{% elif skill.name|lower == "tailwind" %}
+				<img class="me-3" src="{% static '/img/logos/tailwindcss.png' %}" width="18%" alt="tailwindcss-logo" />
+				{% elif skill.name|lower == "sql" %}
+				<i class="fa-solid fa-database fa-2x me-3 sqlColor"></i>
+				{% elif skill.name|lower == "twig" %}
+				<img class="me-4" src="{% static '/img/logos/twig.png' %}" alt="" style="width: 15%" />
+				{% elif skill.name|lower == "flask" %}
+				<img src="{% static '/img/logos/flask_logo.png' %}" class="me-3" width="15%" alt="flask_logo" />
+				{% elif skill.name|lower == "htmx" %} 
+                <img src="{% static '/img/logos/htmx.png' %}" class="me-3" width="18%" alt="htmx-logo" />
+                {% elif skill.name|lower == "alpine" %}
+                <img src="{% static '/img/logos/alpine.png' %}" class="me-3" width="18%" alt="alpine-logo" />
+                {% else %}
+				<i class="fa-brands fa-{{ skill.name | lower }} fa-2x me-3 {{ skill.name | lower }}Color"></i>
+				{% endif %}
+				<p class="fw-bold m-0">{{ skill.name }}</p>
+			</div>
+		</div>
+		<div class="col">
+			<div class="progress">
+				<div
+					class="progress-bar {% if forloop.counter0|divisibleby:2 %} progress-bar-striped progress-bar-animated {% endif %} {{ skill.name | lower }}Color-Bg"
+					role="progressbar"
+					aria-valuenow="{{ skill.percent }}"
+					aria-valuemin="0"
+					aria-valuemax="100"
+					style="width: {{ skill.percent }}%"
+				></div>
+			</div>
+		</div>
+	</div>
 </div>
