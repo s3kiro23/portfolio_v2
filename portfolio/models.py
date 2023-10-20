@@ -16,7 +16,7 @@ class Skill(models.Model):
 class Project(models.Model):
     title = models.CharField(max_length=255)
     subtitle = models.CharField(max_length=255, blank=True)
-    image = models.ImageField(upload_to="portfolio/static/img/projects/", blank=True)
+    image = models.ImageField(upload_to="media/projects/", blank=True)
     description = models.TextField(max_length=255, blank=True)
     skills = models.ManyToManyField(Skill)
     url = models.URLField(blank=True)
