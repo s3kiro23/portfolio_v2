@@ -8,7 +8,10 @@ from .forms import ContactForm
 def index(request):
     form = ContactForm
     if request.method == "POST":
-        print(request.POST)
+        form = ContactForm(request.POST)
+        if not form.is_valid():
+            return HttpResponse("No")
+        form.save()
         return HttpResponse("Yes")
     skills = Skill.objects.all()
     projects = Project.objects.all()
