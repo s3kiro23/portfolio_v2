@@ -5,7 +5,7 @@
 		<h2 class="fw-bold">Mon expertise</h2>
 		<h4 class="fw-light">Développement web</h4>
 		<div class="row mt-4 gy-4 align-items-center">
-			<div class="col-12 col-md-7">{% for skill in skills|slice:":4" %} {% include "./skills_snippet.html" with skill=skill %} {% endfor %}</div>
+			<div class="col-12 col-md-7">{% for skill in skills|slice:":4" %} {% include "../partials/skills_snippet.html" with skill=skill %} {% endfor %}</div>
 			<div class="col-12 col-md-4 offset-md-1">
 				<img class="shadow rounded-3" src="{% static 'img/misc/code.jpg' %}" alt="code" width="100%" />
 			</div>
@@ -15,12 +15,12 @@
 				<img class="shadow rounded-3" src="{% static 'img/misc/design.jpg' %}" alt="design" width="100%" />
 			</div>
 			<div class="col-12 col-md offset-md-1">
-				{% for skill in skills|slice:"5:9" %} {% include "./skills_snippet.html" with skill=skill %} {% endfor %}
+				{% for skill in skills|slice:"5:9" %} {% include "../partials/skills_snippet.html" with skill=skill %} {% endfor %}
 			</div>
 		</div>
 		<div class="row mt-5 gy-4 align-items-center">
 			<div class="col-12 col-md-7">
-				{% for skill in skills|slice:"10:14" %} {% include "./skills_snippet.html" with skill=skill %} {% endfor %}
+				{% for skill in skills|slice:"10:14" %} {% include "../partials/skills_snippet.html" with skill=skill %} {% endfor %}
 			</div>
 			<div class="col-12 col-md-4 offset-md-1">
 				<img class="shadow rounded-3" src="{% static 'img/misc/code2.jpg' %}" alt="code" width="100%" />
@@ -31,7 +31,7 @@
 				<img class="shadow rounded-3" src="{% static 'img/misc/devops.jpg' %}" alt="design" width="100%" />
 			</div>
 			<div class="col-12 col-md offset-md-1">
-				{% for skill in skills|slice:"15:19" %} {% include "./skills_snippet.html" with skill=skill %} {% endfor %}
+				{% for skill in skills|slice:"15:19" %} {% include "../partials/skills_snippet.html" with skill=skill %} {% endfor %}
 			</div>
 		</div>
 	</div>

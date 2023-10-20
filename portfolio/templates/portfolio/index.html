@@ -4,8 +4,10 @@
 
 {% block content %} 
 
-{% include "./partials/summary.html" %}
+{% include "./components/summary.html" %}
 
-{% include "./partials/skills.html" with skills=skills %}
+{% include "./components/skills.html" with skills=skills %}
+
+{% include "./components/projects.html" with projects=projects %}
 
 {% endblock content %}
