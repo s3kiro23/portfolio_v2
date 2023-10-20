@@ -17,8 +17,9 @@ class Project(models.Model):
     title = models.CharField(max_length=255)
     subtitle = models.CharField(max_length=255, blank=True)
     image = models.ImageField(upload_to="portfolio/static/img/projects/", blank=True)
-    description = models.TextField(max_length=255)
+    description = models.TextField(max_length=255, blank=True)
     skills = models.ManyToManyField(Skill)
+    url = models.URLField(blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
