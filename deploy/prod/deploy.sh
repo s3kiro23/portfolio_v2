@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source /etc/environment/portfoliov2/config.ini
+source /opt/dev_custom/portfoliov2/config.ini
 
 echo "AWS Region: $AWS_REGION"
 echo "AWS Account ID: $AWS_ACCOUNT_ID"

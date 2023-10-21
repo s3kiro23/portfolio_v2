@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source /etc/environment/portfoliov2/config.ini
+source /opt/dev_custom/portfoliov2/config.ini
 
 # Set your AWS credentials (make sure you have the necessary AWS CLI installed and configured)
 echo "AWS Region: $AWS_REGION"
@@ -12,8 +12,8 @@ APP_PATH="/opt/dev_custom/projects/$APP_NAME/"
 cd $APP_PATH
 
 git stash
-git checkout master
-git pull origin master
+git checkout main
+git pull origin main
 
 GIT_COMMIT=`git rev-parse --short HEAD`
 
