@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source /opt/dev_custom/portfoliov2/config.ini
+source /opt/portfoliov2/config.ini
 
 # Set your AWS credentials (make sure you have the necessary AWS CLI installed and configured)
 echo "AWS Region: $AWS_REGION"
@@ -25,6 +25,7 @@ aws ecr describe-repositories --repository-names $APP_NAME || aws ecr create-rep
 
 # Build Docker image
 docker build --no-cache -t $APP_NAME:$GIT_COMMIT .
+echo "$AWS_REGION
 docker tag $APP_NAME:$GIT_COMMIT $AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/$APP_NAME:$GIT_COMMIT
 docker tag $APP_NAME:$GIT_COMMIT $AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/$APP_NAME:latest
 
