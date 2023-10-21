@@ -13,8 +13,8 @@ def index(request):
             return HttpResponse("No")
         form.save()
         return HttpResponse("Yes")
-    skills = Skill.objects.all()
-    projects = Project.objects.all()
+    skills = Skill.objects.filter(is_active=True).all()
+    projects = Project.objects.filter(is_active=True).all()
     context = {"skills": skills, "projects": projects, "form": form}
 
     return render(request, "./portfolio/index.html", context=context)

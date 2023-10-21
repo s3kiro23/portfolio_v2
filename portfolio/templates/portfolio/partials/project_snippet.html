@@ -10,7 +10,14 @@
 			<div class="flip-card-back p-3 shadow text-start rounded">
 				<div class="row h-100">
 					<div class="col-12">
-						<h3>Description</h3>
+						<div class="d-flex justify-content-between">
+							<h3>Description</h3>
+							{% if project.github %}
+							<a href="{{ project.github }}" target="_blank">
+								<i class="fa-brands fa-2x fa-square-git text-dark"></i>
+							</a>
+							{% endif %}
+						</div>
 						<p>{{ project.description }}</p>
 					</div>
 					<div class="col-8">
@@ -18,6 +25,12 @@
 						<div class="d-flex gap-3 mt-3">
 							{% for skill in project.skills.all %} {% if skill.name|lower == "jquery" %}
 							<img class="jqueryColor mb-2" width="8%" src="{% static '/img/logos/jquery.png' %}" alt="jquery-logo" />
+							{% elif skill.name|lower == "django" %}
+							<img class="" width="15%" src="{% static '/img/logos/django.png' %}" alt="django-logo" />
+							{% elif skill.name|lower == "graphql" %}
+							<img class="me-3" width="15%" src="{% static '/img/logos/graphql.png' %}" alt="graphql-logo" />
+							{% elif skill.name|lower == "mustache" %}
+							<img class="me-3" width="15%" src="{% static '/img/logos/mustache.png' %}" alt="mustache-logo" />
 							{% elif skill.name|lower == "twig" %}
 							<img class="mb-2" src="{% static '/img/logos/twig.png' %}" alt="" style="width: 5%" />
 							{% elif skill.name|lower == "sql" %}
@@ -26,18 +39,18 @@
 							<i class="fa-brands fa-css3-alt fa-2x text-primary"></i>
 							{% elif skill.name|lower == "javascript" %}
 							<i class="fa-brands fa-square-js fa-2x {{ skill.name | lower }}Color"></i>
-							{% elif skill.name|lower == "django" %}
-							<img class="djangoColor me-3" width="15%" src="{% static '/img/logos/django.png' %}" alt="django-logo" />
 							{% else %}
 							<i class="fa-brands fa-{{ skill.name | lower }} fa-2x {{ skill.name | lower }}Color"></i>
 							{% endif %} {% endfor %}
 						</div>
 					</div>
+					{% if project.url %}
 					<div class="col text-end align-self-end">
 						<a href="{{ project.url }}" target="_blank">
 							<button class="btn btn-outline-primary">Visiter</button>
 						</a>
 					</div>
+					{% endif %}
 				</div>
 			</div>
 		</div>
