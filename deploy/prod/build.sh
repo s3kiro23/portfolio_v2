@@ -25,7 +25,6 @@ aws ecr describe-repositories --repository-names $APP_NAME || aws ecr create-rep
 
 # Build Docker image
 docker build --no-cache -t $APP_NAME:$GIT_COMMIT .
-echo "$AWS_REGION
 docker tag $APP_NAME:$GIT_COMMIT $AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/$APP_NAME:$GIT_COMMIT
 docker tag $APP_NAME:$GIT_COMMIT $AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/$APP_NAME:latest
 
