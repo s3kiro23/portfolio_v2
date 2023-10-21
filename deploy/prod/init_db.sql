@@ -1,0 +1,3 @@
+CREATE DATABASE portfoliov2;
+CREATE USER portfoliov2 WITH ENCRYPTED PASSWORD 'portfoliov2';
+GRANT ALL PRIVILEGES ON DATABASE portfoliov2 to portfoliov2;
