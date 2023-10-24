@@ -3,7 +3,7 @@ version: '3.5'
 services:
     portfoliov2-uwsgi:
         image: 057133510824.dkr.ecr.eu-west-3.amazonaws.com/portfoliov2:latest
-        command: ./deploy/prod/uwsgi
+        command: chmod +x ./deploy/prod/uwsgi && ./deploy/prod/uwsgi
         restart: always
         volumes:
             - type: bind
