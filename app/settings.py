@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 
+import portfolio
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -26,7 +28,9 @@ SECRET_KEY = 'django-insecure-**c78r+eu+hw2a8sw3_m)ai1b-3@+ra31)a4w%m^9+&41(zc57
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "portfolio.jmgeronimi.fr"
+]
 
 
 # Application definition
