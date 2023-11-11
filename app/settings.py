@@ -29,6 +29,8 @@ SECRET_KEY = 'django-insecure-**c78r+eu+hw2a8sw3_m)ai1b-3@+ra31)a4w%m^9+&41(zc57
 DEBUG = True
 
 ALLOWED_HOSTS = [
+    "localhost",
+    "127.0.0.1",
     "portfolio.jmgeronimi.fr"
 ]
 
