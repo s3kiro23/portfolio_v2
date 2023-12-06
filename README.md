@@ -13,8 +13,8 @@ peotry run python manage.py runserver
 
 ## URL
 
-http://127.0.0.1/
-http://127.0.0.1/admin
+- http://127.0.0.1/
+- http://127.0.0.1/admin
 
 
 
