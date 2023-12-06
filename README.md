@@ -1,2 +1,4 @@
 # portfolio_v2
-New portfolio in django web app with htmx and Alpine.js
+Restructuration d'un portfolio initialement développer en html, css et javascript vanilla.
+
+
